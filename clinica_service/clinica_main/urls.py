@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from clinica_app.views import ClienteView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', ClienteView.inicio, name='inicio'),
 ]
